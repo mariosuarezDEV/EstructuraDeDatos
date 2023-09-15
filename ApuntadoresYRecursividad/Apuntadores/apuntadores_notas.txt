@@ -1,0 +1,22 @@
+Las variavles se encuentran en la memoria de las computadoras.
+Para acceder a la variable, la computadora tiene que saber exactamente donde esta almacenada
+A la variable se le asocian tres atributos:
+	-Nombre
+	-Tipo
+	-Direccion de memoria
+Si se le pone "&" va a decir la direccion de memoria
+cout<< n; -> Valor
+cout<< &n; -> Direccion de memoria
+
+Un apuntador es una variable que guarda direcciones en memoria de otras variables
+Cada tipo de dato tiene su apuntador
+
+Para obtener el valor del elemento al que estamos apuntado es necesario poner "*"
+n = 10; -> Esto es una variable normal, estamos mostrando el dato
+pN = &n; -> Esto esta almacenando la posicion en memoria de n
+*pN; -> Esto muestra el dato que tiene guardado n
+
+Los apuntadores deben declararse antes de usarse y se pone su tipo de dato
+int *pInt;
+float *pFloat;
+char *pChar;
