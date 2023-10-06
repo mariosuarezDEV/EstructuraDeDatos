@@ -44,6 +44,7 @@ public:
      void pop();
      int datoTope();
      void muestra();
+     void eliminar_xdato(int x);
 
 };
 
@@ -105,6 +106,35 @@ void Pila::muestra(){
 	}
 }
 
+//funcion para eliminar elemento
+void Pila::eliminar_xdato(int x){
+	//crear una pila aux
+	Pila aux;
+
+	//recorrer la pila
+	while(!estaVacia()){
+		int dato = datoTope();
+		if (dato != x)
+		{
+			//cout<<"Entro al if"<<endl;
+			aux.push(dato); //se meten todos los datos siempre y cuando no sea el dato que se mando como parametro
+			//cout<<"Se metio un dato que no estas buscando"<<endl;
+		}
+		pop();
+		//cout<<"Se elimino un dato"<<endl;
+	}	
+
+	//pasar todo a la original
+	while(!aux.estaVacia()){
+		//cout<<"Se devolvio un dato a la original"<<endl;
+		int dato = aux.datoTope();
+		push(dato);
+		//cout<<"Se devolvio un dato a la original"<<endl;
+		aux.pop();
+
+	}
+
+}
 
 
 int main(){
@@ -117,10 +147,8 @@ int main(){
   c1.push(25);
   cout<<"\nPila1: ";
   c1.muestra();
-
-  cout<<"\nPila1.1: ";
+  c1.eliminar_xdato(10);
+  cout<<"\nPila sin datos: ";
   c1.muestra();
-  system("pause>>null");
- 
-  
+  system("pause>>null"); 
 }
