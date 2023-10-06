@@ -1,0 +1,53 @@
+Meter datos a la lista
+void meter(int x){
+ Nodo *p; -> Crear el nodo
+ p-> setDato(x); -> Funcion de nodo
+ p->setSig(cab)
+ cab=p; -> Igualar la cabeza de la lista al apuntador
+
+}
+
+Sacar el elemento
+void sacar(){
+ nodo *p = cab;
+ cab=cab->getSig();
+ delete p;
+
+}
+
+Ver si la lista esta vacia
+int estaVacia(){
+ if (cab == null){
+  return 1; //verdadero
+ } else{
+  return 0; //falso 
+ }
+
+}
+
+Ver todos los elementos de la lista
+void mostrar(){
+ nodo *p = cab;
+ p=p->getSig();
+ cout<<p;
+
+}
+
+se deben recorrer las listas
+void meter_al_final(int x){
+ Nodo *nuevo;
+ nuevo->setDato(x)
+ //code: recorrer la lista hasta encontrar el ultimo nodo
+ nuevo->setSig(cab)
+ cab->setSig(nuevo)
+ nuevo->setSig(null)
+ 
+}
+
+void eliminar_al_final(int x){
+ Nodo *pAnt, *p;
+ //recorrer la lista hasta que p->getSig sea null
+ //enlazar pAnt a null
+ //delete p
+ 
+}
